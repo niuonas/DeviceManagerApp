@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@use "@material/card";
+@include card.core-styles;
+
+.mdc-card{
+    padding: 1rem;
+}
+
+.mdc-table{
+    padding: 1rem;
+}
+
+.mdc-card{
+    width:fit-content;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+

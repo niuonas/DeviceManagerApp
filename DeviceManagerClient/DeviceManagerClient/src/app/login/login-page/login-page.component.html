@@ -1,0 +1,23 @@
+<div class = "box-container">
+    <div class="img-logo">
+        <img src = "assets/img/angular-logo.png">
+    </div>
+</div>
+    
+<br>
+<br>
+<br>
+
+<div class = "box-container">
+    <form [formGroup] = form (ngSubmit) = onSubmit()>
+        <app-input-field [label] = "'Username'" [control] = "formControls('username')" [placeholderText] = "'Username'"></app-input-field>
+        <app-input-field [label] = "'Password'" [inputType] = "'password'" [control] = "formControls('password')" [placeholderText] = "'Password'"></app-input-field>
+        <button class="submit-button" type="submit">Submit</button>
+    </form>
+    <div class="message" *ngIf='isWrong'>Wrong username or password</div>
+</div>
+
+
+    
+
+

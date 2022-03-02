@@ -1,0 +1,7 @@
+<app-page pageName="User-Delete">
+    <form [formGroup] = form (ngSubmit) = onSubmit()>
+        <app-input-field class="field" [label]="'UserId'" [control]="formControls('userId')" [placeholderText]="'UserId'"></app-input-field>
+        <div class="no-name" *ngIf=userDeleteError>Error when deleting user!</div>
+        <button class="submit-button" type="submit">Submit</button>
+    </form>
+</app-page>

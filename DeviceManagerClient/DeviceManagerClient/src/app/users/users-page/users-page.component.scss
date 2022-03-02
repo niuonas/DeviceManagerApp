@@ -1,0 +1,13 @@
+@import "@material/data-table/mdc-data-table";
+
+.mdc-data-table__header-cell
+{
+    background-color: burlywood;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: space-around;
+}

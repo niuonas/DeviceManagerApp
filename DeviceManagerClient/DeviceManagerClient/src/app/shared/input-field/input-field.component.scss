@@ -1,0 +1,14 @@
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    input{
+        width: 200px;
+    }
+
+    label{
+        font-weight: bolder;
+        font-size: 150%;
+    }
+}

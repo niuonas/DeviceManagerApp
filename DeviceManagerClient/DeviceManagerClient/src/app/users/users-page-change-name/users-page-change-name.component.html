@@ -1,0 +1,7 @@
+<app-page pageName="User-ChangeName">
+    <form [formGroup] = form (ngSubmit) = onSubmit()>
+        <app-input-field class="field" [label] = "'First Name'" [control] = "formControls('firstName')" [placeholderText] = "'First Name'"></app-input-field>
+        <app-input-field class="field" [label] = "'Last Name'" [control] = "formControls('lastName')" [placeholderText] = "'Last Name'" required></app-input-field>
+        <button class="submit-button" type="submit">Submit</button>
+    </form>
+</app-page>

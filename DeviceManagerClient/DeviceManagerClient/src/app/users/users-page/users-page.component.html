@@ -1,0 +1,33 @@
+<app-page pageName="Users Page">
+  <div class="mdc-data-table">
+    <div class="mdc-data-table__table-container">
+      <table class="mdc-data-table__table">
+        <thead>
+          <tr class="mdc-data-table__header-row">
+            <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Username</th>
+            <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader"
+              scope="col">Id</th>
+            <th class="mdc-data-table__header-cell " role="columnheader" scope="col">EmailAddress</th>
+            <th class="mdc-data-table__header-cell" role="columnheader" scope="col">FirstName</th>
+            <th class="mdc-data-table__header-cell" role="columnheader" scope="col">LastName</th>
+            <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Role</th>
+          </tr>
+        </thead>
+        <tbody class="mdc-data-table__content">
+          <tr class="mdc-data-table__row" *ngFor="let user of users | async">
+            <td class="mdc-data-table__cell" scope="row" [routerLink]="user.id | json">{{user.username}}</td>
+            <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{user.id}}</td>
+            <td class="mdc-data-table__cell">{{user.emailAddress}}</td>
+            <td class="mdc-data-table__cell">{{user.firstName}}</td>
+            <td class="mdc-data-table__cell">{{user.lastName}}</td>
+            <td class="mdc-data-table__cell">{{user.role ? "user" : "admin"}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="flex-container">
+        <button class="submit-button" type="submit" onclick="location.href='users/create'">Create</button>
+        <button class="submit-button" type="submit" onclick="location.href='users/delete'">Delete</button>
+      </div>
+    </div>
+  </div>
+</app-page>

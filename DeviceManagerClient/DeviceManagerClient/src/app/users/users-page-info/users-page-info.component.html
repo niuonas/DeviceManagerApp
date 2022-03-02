@@ -1,0 +1,14 @@
+<app-page pageName = "User-Info">
+    <div class="mdc-card" *ngIf="user$ | async as user">
+        <h1>Username: {{user.username}}</h1>
+        <h2>First Name: {{user.firstName}}</h2>
+        <h2>Last Name: {{user.lastName}}</h2>
+        <h2>Email Address: {{user.emailAddress}}</h2>
+        <h2>Role: {{getUserRoleName(user)}}</h2>
+        <div class='flex-container'>
+            <button class="submit-button" type="submit" [routerLink]="'name/'">Change First/Last Name</button>
+            <button class="submit-button" type="submit" [routerLink]="'pass/'">Change Password</button>
+            <button class="submit-button" type="submit" onclick="location.href='users'">Back</button>
+        </div>
+    </div>
+</app-page>

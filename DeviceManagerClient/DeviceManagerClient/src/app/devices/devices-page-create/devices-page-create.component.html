@@ -1,0 +1,7 @@
+<app-page pageName="'Device-Create'">
+    <form [formGroup] = form (ngSubmit) = onSubmit()>
+        <app-input-field class="field" [label] = "'Device Information'" [control] = "formControls('deviceInformation')" [placeholderText] = "'Device Name'"></app-input-field>
+        <div class="no-name" *ngIf=deviceNameIsEmpty>Device Name cannot be empty!</div>
+        <button class="submit-button" type="submit">Submit</button>
+    </form>
+</app-page>

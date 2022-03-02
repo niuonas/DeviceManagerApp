@@ -1,0 +1,12 @@
+<app-page pageName="User-Create">
+    <form [formGroup] = form (ngSubmit) = onSubmit()>
+        <app-input-field class="field" [label]="'Username'" [control]="formControls('username')" [placeholderText]="'Username'"></app-input-field>
+        <div class="no-name" *ngIf=usernameEmpty>Username cannot be empty!</div>
+        <app-input-field class="field"[label]="'Password'" [control]="formControls('password')" [placeholderText]="'Password'" [inputType]="'password'"></app-input-field>
+        <div class="no-name" *ngIf=passwordEmpty>Password cannot be empty!</div>
+        <app-input-field class="field" [label]="'Email Address'" [control]="formControls('emailAddress')" [placeholderText]="'EmailAddress'"></app-input-field>
+        <div class="no-name" *ngIf=emailAddressEmpty>Email Address cannot be empty</div>
+        <button class="submit-button" type="submit">Submit</button>
+        <div class="no-name" *ngIf=errorAddingUser>Error when creating the user!</div>
+    </form>
+</app-page>

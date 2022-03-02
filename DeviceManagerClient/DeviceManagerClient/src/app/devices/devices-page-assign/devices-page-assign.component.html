@@ -1,0 +1,8 @@
+<app-page pageName="Device-Assign">
+    <form [formGroup] = form (ngSubmit) = onSubmit()>
+        <app-input-field class="field" [label] = "'Device Id'" [control] = "formControls('deviceId')" [placeholderText] = "'Device Id'"></app-input-field>
+        <app-input-field class="field" [label] = "'Room Id'" [control] = "formControls('roomId')" [placeholderText] = "'Room Id'"></app-input-field>
+        <div class="no-name" *ngIf=assignError>There was an error trying to assign this device to the room!</div>
+        <button class="submit-button" type="submit">Submit</button>
+    </form>
+</app-page>

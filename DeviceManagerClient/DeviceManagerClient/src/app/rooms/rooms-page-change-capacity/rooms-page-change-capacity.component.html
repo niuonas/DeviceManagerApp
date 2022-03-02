@@ -1,0 +1,6 @@
+<app-page pageName="Room-ChangeCapacity">
+    <form [formGroup] = form (ngSubmit) = onSubmit()>
+        <app-input-field class="field" [label] = "'New Capacity'" [control] = "formControls('newCapacity')" [placeholderText] = "'New Capacity'"></app-input-field>
+        <button class="submit-button" type="submit">Submit</button>
+    </form>
+</app-page>

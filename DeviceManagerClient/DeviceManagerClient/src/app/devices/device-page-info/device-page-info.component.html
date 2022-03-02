@@ -1,0 +1,11 @@
+<app-page pageName="Device-Info">
+    <div class="mdc-card" *ngIf="device$ | async as device">
+        <h1>Device Name: {{device.deviceInformation}}</h1>
+        <h2>Assigned to roomId: {{device.roomId}}</h2>
+        <div class="mdc-card__actions">
+            <div class='flex-container'>
+                <button class="submit-button" type="submit" onclick="location.href='devices'">Back</button>
+            </div>
+        </div>
+    </div>
+</app-page>

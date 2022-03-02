@@ -1,0 +1,7 @@
+<app-page pageName="Room-Create">
+    <form [formGroup] = form (ngSubmit) = onSubmit()>
+        <app-input-field class="field" [label] = "'Room Name'" [control] = "formControls('roomName')" [placeholderText] = "'Room Name'"></app-input-field>
+        <div class="no-name" *ngIf=roomNameIsEmpty>Room Name cannot be empty!</div>
+        <button class="submit-button" type="submit">Submit</button>
+    </form>
+</app-page>
